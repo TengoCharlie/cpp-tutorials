@@ -10,12 +10,32 @@ int32_t main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-    int amount1;
-    cin >> amount1;
 
-    int amount2;
-    cin >> amount2;
-    int sum = amount1 + amount2;
-    cout << sum << endl;
+    int a, b, c;
+    cin >> a >> b >> c;
+    if (a > b)
+    {
+        if (a > c)
+        {
+            // in this case a is grater than both b and c
+            cout << a << endl;
+        }
+        else
+        {
+            cout << c << endl;
+        }
+    }
+    else
+    {
+        if (b > c)
+        {
+            cout << b << endl;
+        }
+        else
+        {
+            cout << c << endl;
+        }
+    }
+
     return 0;
 }
