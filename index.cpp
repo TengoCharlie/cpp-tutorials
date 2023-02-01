@@ -11,30 +11,16 @@ int32_t main()
     freopen("output.txt", "w", stdout);
 #endif
 
-    int a, b, c;
-    cin >> a >> b >> c;
-    if (a > b)
+    int n;
+    cin >> n;
+
+    if (n % 2 == 0)
     {
-        if (a > c)
-        {
-            // in this case a is grater than both b and c
-            cout << a << endl;
-        }
-        else
-        {
-            cout << c << endl;
-        }
+        cout << "EVEN" << endl;
     }
     else
     {
-        if (b > c)
-        {
-            cout << b << endl;
-        }
-        else
-        {
-            cout << c << endl;
-        }
+        cout << "ODD" << endl;
     }
 
     return 0;
