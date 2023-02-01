@@ -13,16 +13,17 @@ int32_t main()
 
     int n;
     cin >> n;
-
-    if (n % 2 == 0)
+    int i;
+    for (i = 2; i < n; i++)
     {
-        cout << "EVEN" << endl;
+        if (n % i == 0)
+        {
+            cout << "None Prime" << endl;
+            break;
+        }
     }
-    else
-    {
-        cout << "ODD" << endl;
-    }
+    if (i == n)
+        cout << "Prime" << endl;
 
     return 0;
 }
- 
