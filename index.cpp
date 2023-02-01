@@ -11,19 +11,24 @@ int32_t main()
     freopen("output.txt", "w", stdout);
 #endif
 
-    int n;
-    cin >> n;
-    int i;
-    for (i = 2; i < n; i++)
+    int a, b;
+    cin >> a >> b;
+
+    for (int num = a; num <= b; num++)
     {
-        if (n % i == 0)
+        int i;
+        for (i = 2; i < num; i++)
         {
-            cout << "None Prime" << endl;
-            break;
+            if (num % i == 0)
+            {
+                break;
+            }
+        }
+        if (i == num)
+        {
+            cout << num << endl;
         }
     }
-    if (i == n)
-        cout << "Prime" << endl;
 
     return 0;
 }
